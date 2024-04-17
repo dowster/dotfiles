@@ -9,6 +9,10 @@ brew "gnu-indent"
 brew "gnu-getopt"
 brew "grep"
 brew "git" 
+brew "git-lfs"
+brew "util-linux"
+brew "parallel"
+brew "cmake"
 
 # IaC
 brew "terraform"
@@ -22,7 +26,7 @@ brew "go"
 brew "mockery"
 
 # Jav-uh...
-brew "openjdk@8"
+# brew "openjdk@8"
 brew "tomcat"
 brew "maven"
 
@@ -31,18 +35,24 @@ brew "awscli"
 brew "aws-shell"
 cask "aws-vpn-client"
 
+# Kubernetes
+brew "derailed/k9s/k9s"
+
 # Docker Stuff
 cask "docker"
 
 # Shell Hell
 brew "tmux"
 brew "htop"
+brew "nload"
 brew "neofetch"
 brew "neovim"
 brew "yq"
 brew "jq"
+brew "ffmpeg"
 
 # Casks n Stuff
+cask "amethyst"
 cask "dbeaver-community"
 cask "discord"
 cask "obsidian"
@@ -55,6 +65,8 @@ cask "visual-studio-code"
 cask "waterfox"
 cask "wireshark"
 cask "zoom"
+cask "meetingbar"
+cask "kitty"
 
 # # Needed for swiftfin
 # brew "carthage"
