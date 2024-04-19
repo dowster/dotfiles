@@ -45,7 +45,21 @@ require("lazy").setup({
          local lspconfig = require("lspconfig")
 
          require("mason").setup()
-         require("mason-lspconfig").setup()
+         require("mason-lspconfig").setup {
+            ensure_installed = {
+                -- "bash-debug-adapter",
+                "bashls",
+                -- "go-debug-adapter",
+                "gopls",
+                "lua_ls",
+                "rust_analyzer",
+                -- "shfmt",
+                -- "stylua",
+                "terraformls",
+                "tflint",
+                "yamlls"
+            }
+         }
 
          require("mason-lspconfig").setup_handlers({
              function(server)
