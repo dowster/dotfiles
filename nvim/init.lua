@@ -6,6 +6,8 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
 vim.cmd("set smartindent")
 
+vim.cmd("colorscheme habamax")
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
