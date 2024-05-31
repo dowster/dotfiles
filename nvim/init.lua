@@ -51,6 +51,7 @@ require("lazy").setup({
             ensure_installed = {
                 -- "bash-debug-adapter",
                 "bashls",
+                "bufls",
                 -- "go-debug-adapter",
                 "gopls",
                 "lua_ls",

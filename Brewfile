@@ -8,7 +8,7 @@ brew "gnutls"
 brew "gnu-indent"
 brew "gnu-getopt"
 brew "grep"
-brew "git" 
+brew "git"
 brew "git-lfs"
 brew "util-linux"
 brew "parallel"
@@ -18,12 +18,15 @@ brew "cmake"
 brew "terraform"
 brew "helm"
 
+brew "asdf"
+
 # Setup NodeJS tooling
 brew "fnm"
 
 # Setup Go tooling
 brew "go"
 brew "mockery"
+brew "mise"
 
 # Jav-uh...
 # brew "openjdk@8"
