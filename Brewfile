@@ -53,6 +53,7 @@ brew "neovim"
 brew "yq"
 brew "jq"
 brew "ffmpeg"
+brew "gh"
 
 # Casks n Stuff
 cask "amethyst"
