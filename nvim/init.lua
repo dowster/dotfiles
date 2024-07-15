@@ -24,6 +24,7 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = ","
 
 require("lazy").setup({
+    { import = "plugins" }, -- import plugins from ./plugins
 --  {
 --    "folke/tokyonight.nvim",
 --    lazy = false, -- make sure we load this during startup if it is your main colorscheme
@@ -36,7 +37,7 @@ require("lazy").setup({
   "folke/which-key.nvim",
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   "folke/neodev.nvim",
-  { 
+  {
       "neovim/nvim-lspconfig",
       dependencies = {
           "williamboman/mason.nvim",
@@ -115,4 +116,14 @@ require("lazy").setup({
     end,
   },
 }, {})
+
+local function set_filetype(pattern, filetype)
+    vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+        pattern = pattern,
+        command = "set filetype=" .. filetype,
+    })
+end
+
+set_filetype({ "docker-compose.yaml" }, "yaml.docker-compose")
+set_filetype({ "docker-compose.yml" }, "yaml.docker-compose")
 
