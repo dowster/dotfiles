@@ -13,6 +13,7 @@ brew "git-lfs"
 brew "util-linux"
 brew "parallel"
 brew "cmake"
+brew "fzf"
 
 # IaC
 brew "terraform"
