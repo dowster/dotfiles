@@ -35,6 +35,16 @@ require("lazy").setup({
 --    end,
 --  },
   "folke/which-key.nvim",
+  {
+      'topaxi/pipeline.nvim',
+      keys = {
+        { '<leader>ci', '<cmd>Pipeline<cr>', desc = 'Open pipeline.nvim' },
+      },
+      -- optional, you can also install and use `yq` instead.
+      build = 'make',
+      ---@type pipeline.Config
+      opts = {},
+  },
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   "folke/neodev.nvim",
   {
@@ -52,13 +62,14 @@ require("lazy").setup({
             ensure_installed = {
                 -- "bash-debug-adapter",
                 "bashls",
-                "bufls",
+                -- "buf",
                 -- "go-debug-adapter",
                 "gopls",
                 "lua_ls",
                 "rust_analyzer",
                 -- "shfmt",
                 -- "stylua",
+                "svelte",
                 "terraformls",
                 "tflint",
                 "yamlls"
@@ -79,6 +90,9 @@ require("lazy").setup({
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
     },
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
     config = function()
         local cmp = require'cmp'
 

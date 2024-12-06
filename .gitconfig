@@ -1,3 +1,23 @@
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+[url "git@bitbucket.org:fetchrewards"]
+	insteadOf = https://bitbucket.org/fetchrewards
+
 [user]
-	email = brady@dowster.net
-	name = dowster
+    name = dowster
+    email = brady@dowster.net
+
+[includeIf "gitdir:~/fr/"]
+	path = ~/.gitconfig-fetch
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+    defaultBranch = main
+
+
+[core]
+	editor = nvim
