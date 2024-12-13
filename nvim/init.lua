@@ -5,6 +5,7 @@ vim.cmd("set tabstop=4 softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
 vim.cmd("set smartindent")
+vim.cmd("set signcolumn=yes:1")
 
 vim.cmd("colorscheme habamax")
 
@@ -56,6 +57,9 @@ require("lazy").setup({
 
      config = function()
          local lspconfig = require("lspconfig")
+         lspconfig.ccls.setup {
+           init_options = { cache = { directory = ".ccls-cache" } }
+         }
 
          require("mason").setup()
          require("mason-lspconfig").setup {
@@ -140,4 +144,4 @@ end
 
 set_filetype({ "docker-compose.yaml" }, "yaml.docker-compose")
 set_filetype({ "docker-compose.yml" }, "yaml.docker-compose")
-
+vim.keymap.set('n', '<leader>fu', ':lua require("telescope.builtin").lsp_references()<CR>', { noremap = true, silent = true })
