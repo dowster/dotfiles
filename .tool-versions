@@ -1,7 +1,6 @@
-ruby 3.2.3
+ruby   3.2.3
 python 3.10.14
-buf 1.32.2
-
-mage 1.15.0
+buf    1.32.2
+mage   1.15.0
 golang 1.23.3
-
+rust   latest
