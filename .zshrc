@@ -104,3 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval "$(/home/dowster/.local/bin/mise activate zsh)"
+
+# opencode
+export PATH=/home/dowster/.opencode/bin:$PATH
