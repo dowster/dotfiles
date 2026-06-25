@@ -21,3 +21,4 @@
 
 [core]
 	editor = nvim
+	excludesFile = ~/.gitignore
