@@ -6,7 +6,6 @@ vim.cmd("set shiftwidth=4")
 vim.cmd("set expandtab")
 vim.cmd("set smartindent")
 vim.cmd("set signcolumn=yes:1")
-
 vim.cmd("colorscheme habamax")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -141,7 +140,8 @@ local function set_filetype(pattern, filetype)
         command = "set filetype=" .. filetype,
     })
 end
-
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 set_filetype({ "docker-compose.yaml" }, "yaml.docker-compose")
 set_filetype({ "docker-compose.yml" }, "yaml.docker-compose")
 vim.keymap.set('n', '<leader>fu', ':lua require("telescope.builtin").lsp_references()<CR>', { noremap = true, silent = true })
